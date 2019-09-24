@@ -1,16 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Counter from "./counter";
 
 export const Home = props => {
-	let text;
-	if (props.counter < 10) {
-		text = props.counter;
-	} else {
-		text = 0;
-	}
-	return <h1>{text}</h1>;
+	return (
+		<div className="d-flex align-items-center justify-content-center">
+			<Counter content={props.hour} />
+			<Counter content={props.hour} />
+			<Counter content={props.minute} />
+			<Counter content={props.second} />
+		</div>
+	);
 };
 
 Home.propTypes = {
-	counter: PropTypes.number
+	hour: PropTypes.hour,
+	minute: PropTypes.string,
+	second: PropTypes.string
+};
+
+Home.defaultProps = {
+	hour: "0",
+	second: "0",
+	minute: "0"
 };
