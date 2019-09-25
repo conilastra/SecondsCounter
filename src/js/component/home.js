@@ -6,9 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Home = props => {
 	return (
-		<div className="d-flex container align-middle justify-content-center">
+		<div className="d-flex container-fluid align-middle justify-content-center flex-nowrap">
 			<div className="row my-5">
-				<div className="col-2 rounded-lg bg-dark mx-1 py-4 text-white text-center display-3">
+				<div
+					className="col-2 rounded-lg bg-dark mx-1 py-4 text-white text-center display-3"
+					style={{ width: "2em" }}>
 					<FontAwesomeIcon icon={faClock} />
 				</div>
 				<Counter content={props.n000000} />
