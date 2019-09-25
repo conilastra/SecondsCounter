@@ -1,7 +1,6 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
-import PropTypes from "prop-types";
 
 //include bootstrap npm library into the bundle
 import "bootstrap";
@@ -21,12 +20,12 @@ let hours;
 
 setInterval(function() {
 	ReactDOM.render(
-		<Home second={seconds} minute={minutes} />,
+		<Home n0={seconds} n00={minutes} n000={hours} />,
 		document.querySelector("#app")
 	);
 	count++;
 
-	let number = count.toString();
+	number = count.toString();
 	seconds = number[0];
 	if (number.length === 2) {
 		seconds = number[1];

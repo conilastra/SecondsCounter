@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 
 const Counter = props => {
 	return (
-		<div className="rounded bg-dark mx-1 p-2 text-white display-3">
+		<div
+			className="col rounded-lg bg-dark mx-1 py-4 text-white text-center display-3"
+			style={{ width: "1.2em" }}>
 			{props.content}
 		</div>
 	);
